@@ -1,6 +1,5 @@
 #include <cstdlib>
 #include <windows.h>
-#include <process.h>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -10,10 +9,10 @@
 int main(int argc, char** argv, char** envp) {
 
 	// get path to executable
-	char getDirBuffer[100];
-	GetModuleFileNameA(NULL, getDirBuffer, 100);
-	bool out1 = std::filesystem::path(getDirBuffer).parent_path().stem().string() == "out1";
-	std::string rootdir = std::filesystem::path(getDirBuffer).parent_path().parent_path().parent_path().string();
+	char cwdBuf[100];
+	GetModuleFileNameA(NULL, cwdBuf, 100);
+	bool out1 = std::filesystem::path(cwdBuf).parent_path().stem().string() == "out1";
+	std::string rootdir = std::filesystem::path(cwdBuf).parent_path().parent_path().parent_path().string();
 
 	// open main.cpp
 	std::fstream file(std::format("{}\\src\\main.cpp", rootdir));
