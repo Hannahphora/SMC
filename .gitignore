@@ -3,6 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+build/
+
 *.lib
 *.idb
 
@@ -30,7 +32,6 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]uild/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
