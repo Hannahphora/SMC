@@ -5,6 +5,8 @@
 
 using std::string;
 
+// https://learn.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=msvc-170
+
 int main(int argc, char** argv) {
 
 	string x;
